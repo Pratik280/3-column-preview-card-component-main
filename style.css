@@ -10,7 +10,7 @@
 
 - Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
 - Weights: 700
-*/
+ */
 
 :root{
   --bright-orange: hsl(31, 77%, 52%); /*first article*/
@@ -18,4 +18,72 @@
   --very-dark-cyan: hsl(179, 100%, 13%); /*third article*/
   --transparent-white-text: hsla(0, 0%, 100%, 0.75); /*paragraph*/
   --very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+
+  --fs-700: 3rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  --fs-700: 5rem;
+  --fs-500: 1.5rem;
+  --fs-400: 1.125rem;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: var(--fs-700);
+  color: var(--very-light-gray);
+}
+
+p{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: var(--fs-400);
+  color: var(--transparent-white-text);
+}
+
+a{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: var(--fs-500);
+  text-decoration: none;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.sedan{
+  background-color: var(--bright-orange);
+}
+
+.sedan a {
+  color: var(--bright-orange);
+  background-color: var(--very-light-gray);
+  padding: 0.75rem 2rem;
+  border-radius: 5%;
+
+}
+.sedan a:hover {
+  color: var(--very-light-gray);
+  background-color: var(--bright-orange);
+  border: 1px solid var(--very-light-gray);
+}
+@media only screen and (min-width: 600px) {
+  body{
+    min-height: 100vh;
+  }
+  main{
+    flex-direction: row;
+    min-height: 95vh;
+  }
 }
