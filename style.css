@@ -1,3 +1,4 @@
+/* custom properties */
 :root{
   --bright-orange: hsl(31, 77%, 52%); /*first article*/
   --dark-cyan: hsl(184, 100%, 22%);   /*second article*/
@@ -7,9 +8,9 @@
 
   font-size: 62.5%;
   /* --fs-700: 3rem; */
-  --fs-700: clamp(3rem, 5vw, 5rem);
+  --fs-700: clamp(3.5rem, 5vw, 5rem);
   /* --fs-500: 1.25rem; */
-  --fs-500: clamp(1.5rem, 2vw, 1.75rem);
+  --fs-500: clamp(1.5rem, 2vw, 1.65rem);
   /* --fs-400: 1rem; */
   --fs-400: clamp(1.5rem, 1.75vw, 1.75rem);
 }
@@ -20,6 +21,7 @@
 /*   --fs-400: 1.125rem; */
 /* } */
 
+/* default styles */
 *{
   padding: 0;
   margin: 0;
@@ -45,6 +47,7 @@ a{
   text-decoration: none;
 }
 
+/* default styles for card */
 main{
   display: flex;
   flex-direction: column;
@@ -72,19 +75,26 @@ article h1{
   margin: 0px 50px;
 }
 
-article .btn-wrapper{
-  margin: 30px 50px;
+article a{
+  padding: 1.25rem 2.5rem;
+  border-top-left-radius:25px;  
+  border-top-right-radius:25px;  
+  border-bottom-right-radius:25px;  
+  border-bottom-left-radius:25px; 
 }
+article .btn-wrapper{
+  margin: 45px 50px;
+}
+
+/* card design */
 .sedan{
   background-color: var(--bright-orange);
+  border-radius: 10px 10px 0px 0px;
 }
 
 .sedan a {
   color: var(--bright-orange);
   background-color: var(--very-light-gray);
-  padding: 0.75rem 2rem;
-  border-radius: 5%;
-
 }
 .sedan a:hover {
   color: var(--very-light-gray);
@@ -99,9 +109,6 @@ article .btn-wrapper{
 .svux a {
   color: var(--dark-cyan);
   background-color: var(--very-light-gray);
-  padding: 0.75rem 2rem;
-  border-radius: 5%;
-
 }
 .svux a:hover {
   color: var(--very-light-gray);
@@ -111,14 +118,12 @@ article .btn-wrapper{
 
 .luxury{
   background-color: var(--very-dark-cyan);
+  border-radius: 0px 0px 10px 10px;
 }
 
 .luxury a {
   color: var(--very-dark-cyan);
   background-color: var(--very-light-gray);
-  padding: 0.75rem 2rem;
-  border-radius: 5%;
-
 }
 .luxury a:hover {
   color: var(--very-light-gray);
@@ -126,10 +131,12 @@ article .btn-wrapper{
   border: 1px solid var(--very-light-gray);
 }
 
+/* footer */
 footer p{
   color: #1f1f1f;
   text-align: center;
 }
+
 /* desktop */
 @media only screen and (min-width: 768px) {
   body{
@@ -144,11 +151,17 @@ footer p{
     justify-content: center;
     align-items: center;
     min-height: 97vh;
-   margin: 0 auto;
+    margin: 0 auto;
   }
-article {
-  height: 500px;
-}
+  article {
+    height: 500px;
+  }
+  .sedan{
+    border-radius: 10px 0px 0px 10px;
+  }
+  .luxury{
+    border-radius: 0px 10px 10px 0px;
+  }
   footer{
     min-height: 3vh;
   }
