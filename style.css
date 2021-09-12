@@ -138,7 +138,7 @@ footer p{
 }
 
 /* desktop */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 810px) {
   body{
     min-height: 100vh;
     display: flex;
